@@ -200,3 +200,245 @@ footer .cp{overflow-wrap:anywhere}
 }
 @media(max-width:520px){.contact{grid-template-columns:1fr}.ctas .in .cta.lg{display:block;text-align:center}}
 .list li.empty{display:block}
+
+
+/* =========================================================
+   INTRO DE ABERTURA
+========================================================= */
+
+html.intro-lock,
+body.intro-lock {
+  overflow: hidden;
+}
+
+.site-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: all;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Cortinas */
+
+.intro-curtain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50.5%;
+  background: #0b0a09;
+  will-change: transform;
+  transform: translateX(0);
+}
+
+.intro-curtain-left {
+  left: 0;
+}
+
+.intro-curtain-right {
+  right: 0;
+}
+
+/* Pequeno detalhe de profundidade nas bordas */
+
+.intro-curtain-left::after,
+.intro-curtain-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  opacity: 0.18;
+}
+
+.intro-curtain-left::after {
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--ac),
+    transparent
+  );
+}
+
+.intro-curtain-right::after {
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--ac),
+    transparent
+  );
+}
+
+/* Marca central */
+
+.intro-brand {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+
+  color: var(--of);
+
+  will-change: opacity, transform;
+  transition:
+    opacity 0.65s cubic-bezier(.22,1,.36,1),
+    transform 0.9s cubic-bezier(.22,1,.36,1);
+}
+
+/* Nome */
+
+.intro-brand-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.9;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+/* Imóveis */
+
+.intro-brand-type {
+  margin-top: 8px;
+  font-family: Manrope, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--mut);
+
+  padding-left: 0.42em;
+}
+
+/* Linha */
+
+.intro-rule {
+  width: 0;
+  height: 1px;
+  margin-top: 28px;
+  background: var(--ac);
+
+  transition:
+    width 0.9s cubic-bezier(.22,1,.36,1);
+}
+
+/* Localização */
+
+.intro-location {
+  margin-top: 14px;
+  font-family: Manrope, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(239,234,226,.42);
+}
+
+
+/* =========================================================
+   ESTADO INICIAL
+========================================================= */
+
+.site-intro .intro-brand {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.site-intro .intro-rule {
+  width: 0;
+}
+
+
+/* =========================================================
+   COMEÇO DA ANIMAÇÃO
+========================================================= */
+
+.site-intro.play .intro-brand {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-intro.play .intro-rule {
+  width: 72px;
+}
+
+
+/* =========================================================
+   ABERTURA
+========================================================= */
+
+.site-intro.open .intro-curtain-left {
+  transform: translateX(-101%);
+  transition:
+    transform 1.2s cubic-bezier(.77,0,.18,1);
+}
+
+.site-intro.open .intro-curtain-right {
+  transform: translateX(101%);
+  transition:
+    transform 1.2s cubic-bezier(.77,0,.18,1);
+}
+
+.site-intro.open .intro-brand {
+  opacity: 0;
+  transform: translateY(-16px) scale(.97);
+}
+
+
+/* =========================================================
+   SAÍDA
+========================================================= */
+
+.site-intro.done {
+  pointer-events: none;
+}
+
+.site-intro.done .intro-brand {
+  opacity: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 820px) {
+
+  .intro-brand-name {
+    font-size: clamp(42px, 12vw, 64px);
+  }
+
+  .intro-brand-type {
+    font-size: 9px;
+    letter-spacing: .34em;
+  }
+
+  .intro-rule {
+    margin-top: 24px;
+  }
+
+  .intro-location {
+    font-size: 8px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .intro-curtain-left,
+  .intro-curtain-right,
+  .intro-brand {
+    transition: none !important;
+  }
+
+}

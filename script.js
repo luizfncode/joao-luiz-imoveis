@@ -116,3 +116,76 @@ if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
   document.querySelectorAll('.rv').forEach(el => io.observe(el));
 } else document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
+
+/* =========================================================
+   INTRO DE ABERTURA
+========================================================= */
+
+const siteIntro = document.getElementById('siteIntro');
+
+let introStarted = false;
+
+document.documentElement.classList.add('intro-lock');
+document.body.classList.add('intro-lock');
+
+
+function startSiteIntro() {
+
+  if (introStarted || !siteIntro) return;
+
+  introStarted = true;
+
+  /* Pequeno tempo para garantir que o primeiro frame
+     esteja renderizado atrás da intro */
+
+  setTimeout(() => {
+
+    siteIntro.classList.add('play');
+
+  }, 120);
+
+
+  /* Abre as cortinas */
+
+  setTimeout(() => {
+
+    siteIntro.classList.add('open');
+
+  }, 850);
+
+
+  /* Libera a página */
+
+  setTimeout(() => {
+
+    siteIntro.classList.add('done');
+
+    document.documentElement.classList.remove('intro-lock');
+    document.body.classList.remove('intro-lock');
+
+  }, 1900);
+
+
+  /* Remove completamente depois da animação */
+
+  setTimeout(() => {
+
+    siteIntro.remove();
+
+  }, 2500);
+
+}
+
+
+/* Quando o primeiro frame real estiver pronto */
+window.addEventListener('hero-first-frame-ready', startSiteIntro);
+
+
+/* Fallback caso não existam frames reais */
+setTimeout(() => {
+
+  if (!introStarted) {
+    startSiteIntro();
+  }
+
+}, 2200);
