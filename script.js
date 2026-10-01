@@ -86,7 +86,7 @@ addEventListener('resize', () => document.querySelectorAll('.ph').forEach(paint)
 onScroll();
 
 /* ===== Explorar imóveis (EDITAR os dados abaixo; os textos entre colchetes são provisórios) ===== */
-const L = 'Luziânia — GO', WA = 'https://wa.me/5561999823527';
+const L = 'Luziânia — GO', WA = 'https://wa.me/556199563527';
 const P = [
   {fin:'comprar',tipo:'Casa',nome:'Casa residencial',t:.1},
   {fin:'comprar',tipo:'Apartamento',nome:'Apartamento residencial',t:.3},
