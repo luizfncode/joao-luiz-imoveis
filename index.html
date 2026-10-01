@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR" class="js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>João Luiz Imóveis | Compra, venda e locação em Luziânia – GO</title>
+
+  <meta name="description" content="Imobiliária em Luziânia – GO desde 2012. Compra, venda, locação e avaliação de imóveis com atendimento próximo.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <a class="logo" href="#hero" aria-label="João Luiz Imóveis">
+    <!-- Troque pelo logotipo real: <img src="logo.svg" alt="João Luiz Imóveis"> -->
+    <span class="mark"></span><span>João Luiz<small>Imóveis</small></span>
+  </a>
+  <nav id="menu">
+    <a href="#sobre">Sobre</a>
+    <a href="#imoveis">Imóveis</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#processo">Como funciona</a>
+    <a href="#areas">Atuação</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="pill" href="https://wa.me/5561999823527" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+    <i></i><i></i>
+  </button>
+</header>
+
+<section id="hero">
+  <div class="stage" id="stage">
+    <canvas id="cv"></canvas>
+    <div class="shade"></div>
+    <div class="ui" id="ui">
+      <h1>
+        Seu próximo<br>
+        <b>imóvel</b>
+        <br>começa aqui.
+      </h1>
+      <p class="sub">Encontre casas, apartamentos, terrenos e outras oportunidades em Luziânia com a João Luiz Imóveis.</p>
+      <p class="tag">Compra &nbsp;•&nbsp; Venda &nbsp;•&nbsp; Locação &nbsp;•&nbsp; Avaliação</p>
+      <div class="btns" id="cta">
+        <a class="cta pri" href="#imoveis">Ver imóveis</a>
+        <a class="cta" href="https://wa.me/5561999823527" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="scroll" id="scr">
+        <i></i>Role para explorar
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="left">
+    <p class="lbl">Sobre a João Luiz Imóveis</p>
+    <h2>Atendimento próximo em Luziânia, desde 2012.</h2>
+    <p class="txt">Atuando em Luziânia, a João Luiz Imóveis trabalha com compra, venda, locação e avaliação de imóveis, oferecendo atendimento próximo para quem busca uma nova propriedade ou deseja negociar seu imóvel.</p>
+    <div class="micro">
+      <div><span>Compra</span><p>Oportunidades para morar ou investir.</p></div>
+      <div><span>Venda</span><p>Seu imóvel apresentado a quem procura.</p></div>
+      <div><span>Locação</span><p>Opções residenciais e comerciais.</p></div>
+    </div>
+    <p class="quote">Do primeiro contato à negociação, com atenção em cada etapa.</p>
+  </div>
+  <figure class="right"><canvas id="cv2"></canvas>
+    <figcaption><small>Em Luziânia</small>Desde 2012</figcaption></figure>
+</section>
+
+<section id="imoveis" class="sec">
+  <div class="head rv">
+    <div>
+      <p class="lbl">Imóveis em destaque</p>
+      <h2>Oportunidades à venda em Luziânia.</h2>
+    </div>
+    <div class="side">
+      <p class="ctx">Casas, apartamentos e terrenos selecionados pela equipe. Valores e detalhes sob consulta.</p>
+      <a class="pill" href="#explorar">Ver todos os imóveis</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <article class="rv im a">
+      <canvas class="ph" data-t="0.15" data-src="img/imovel-1.png"></canvas>
+      <div class="info">
+        <span class="st">Venda</span>
+        <h3>Casa residencial</h3>
+        <p>Luziânia — GO</p>
+        <p class="spec">Detalhes e valores sob consulta</p>
+        <div class="row">
+          <b>Consulte valores</b>
+          <a href="https://wa.me/5561999823527?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Casa%20residencial" target="_blank" rel="noopener">Ver detalhes</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="rv im ">
+      <canvas class="ph" data-t="0.55" data-src="img/imovel-2.png"></canvas>
+      <div class="info">
+        <span class="st">Venda</span>
+        <h3>Terreno</h3>
+        <p>Luziânia — GO</p>
+        <p class="spec">Detalhes e valores sob consulta</p>
+        <div class="row">
+          <b>Consulte valores</b>
+          <a href="https://wa.me/5561999823527?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Terreno" target="_blank" rel="noopener">Ver detalhes</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="rv im ">
+      <canvas class="ph" data-t="0.8" data-src="img/imovel-3.png"></canvas>
+      <div class="info">
+        <span class="st">Venda</span>
+        <h3>Apartamento residencial</h3>
+        <p>Luziânia — GO</p>
+        <p class="spec">Detalhes e valores sob consulta</p>
+        <div class="row">
+          <b>Consulte valores</b>
+          <a href="https://wa.me/5561999823527?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Apartamento%20residencial" target="_blank" rel="noopener">Ver detalhes</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="explorar" class="sec">
+  <div class="head rv">
+    <div>
+      <p class="lbl">Explorar imóveis</p>
+      <h2>Encontre o imóvel ideal em Luziânia.</h2>
+    </div>
+    <p class="ctx">Escolha a finalidade e o tipo de imóvel. A lista se ajusta na hora.</p>
+  </div>
+  <form class="flt" id="flt" onsubmit="return false">
+    <div class="seg">
+      <button type="button" class="on" data-fin="comprar">Comprar</button>
+      <button type="button" data-fin="alugar">Alugar</button>
+    </div>
+    <select id="ft" aria-label="Tipo de imóvel">
+      <option value="">Todos os tipos</option>
+      <option>Casa</option>
+      <option>Apartamento</option>
+      <option>Terreno</option>
+      <option>Lote</option>
+    </select>
+    <button class="cta go" type="button" id="go">Explorar imóveis</button>
+  </form>
+  <p class="cnt" id="cnt"></p><ul class="list" id="list"></ul>
+</section>
+
+<section id="servicos" class="sec">
+  <div class="head rv">
+    <div>
+      <p class="lbl">Serviços</p>
+      <h2>Comprar, vender e alugar com orientação.</h2>
+    </div>
+    <p class="ctx">Quatro frentes de atendimento. Passe o mouse para ver cada uma.</p>
+  </div>
+  <div class="svc-wrap">
+    <ul class="svc">
+      <li class=on data-t="0.2" data-src="img/servico-compra.jpg">
+        <h3>Comprar</h3>
+        <i></i>
+        <p>Encontre oportunidades para morar ou investir em Luziânia.</p>
+        <a href="https://wa.me/5561999823527" target="_blank" rel="noopener">Falar sobre compra</a>
+      </li>
+      <li data-t="0.5" data-src="img/servico-venda.jpg">
+        <h3>Vender</h3>
+        <i></i>
+        <p>Apresente seu imóvel a pessoas que estão procurando uma nova oportunidade.</p>
+        <a href="https://wa.me/5561999823527" target="_blank" rel="noopener">Falar sobre venda</a>
+      </li>
+      <li data-t="0.75" data-src="img/servico-locacao.jpg">
+        <h3>Alugar</h3>
+        <i></i>
+        <p>Encontre opções residenciais e comerciais para diferentes necessidades.</p>
+        <a href="https://wa.me/5561999823527" target="_blank" rel="noopener">Falar sobre locação</a>
+      </li>
+      <li data-t="1" data-src="img/servico-avaliacao.jpg">
+        <h3>Avaliação</h3>
+        <i></i>
+        <p>Conte com orientação para entender melhor o valor e o potencial do seu imóvel.</p>
+        <a href="https://wa.me/5561999823527" target="_blank" rel="noopener">Pedir avaliação</a>
+      </li>
+    </ul>
+    <div class="prev">
+      <canvas class="ph" id="prev" data-t=".2"></canvas>
+    </div>
+  </div>
+</section>
+
+<section id="vender" class="own">
+  <div class="rv">
+    <p class="lbl">Para proprietários</p>
+    <h2>Tem um imóvel para vender?</h2>
+  </div>
+  <div class="rv">
+    <p class="ctx">Conte com a João Luiz Imóveis para apresentar sua propriedade e encontrar novas oportunidades de negociação.</p>
+    <a class="cta lg" href="https://wa.me/5561999823527?text=Ol%C3%A1!%20Quero%20vender%20meu%20im%C3%B3vel" target="_blank" rel="noopener">Quero vender meu imóvel</a>
+  </div>
+</section>
+
+<section id="processo" class="sec">
+  <div class="head rv">
+    <div>
+      <p class="lbl">Como funciona</p>
+      <h2>Do primeiro contato à negociação.</h2>
+    </div>
+    <p class="ctx">Quatro passos simples para você saber sempre o que vem a seguir.</p>
+  </div>
+  <ol class="steps">
+    <li class="rv">
+      <b>01</b>
+      <h3>Entenda o que você procura</h3>
+      <p>Uma conversa para alinhar perfil, objetivo e necessidades.</p>
+    </li>
+    <li class="rv">
+      <b>02</b>
+      <h3>Encontre as oportunidades</h3>
+      <p>Opções que fazem sentido para o que você busca.</p>
+    </li>
+    <li class="rv">
+      <b>03</b>
+      <h3>Conheça o imóvel</h3>
+      <p>Visita combinada com acompanhamento da equipe.</p>
+    </li>
+    <li class="rv">
+      <b>04</b>
+      <h3>Negocie com orientação</h3>
+      <p>Apoio da proposta até a conclusão do negócio.</p>
+    </li>
+  </ol>
+</section>
+
+<section id="areas" class="sec">
+  <div class="areas">
+    <div class="rv">
+      <p class="lbl">Áreas de atuação</p>
+      <h2>Onde a João Luiz Imóveis atua.</h2>
+      <p class="ctx">Atendimento em Luziânia, com escritório no Setor Aeroporto. Fale com a equipe para saber mais sobre outras regiões.</p>
+      <ul class="loc"><li>Luziânia — GO</li><li>Setor Aeroporto <small>escritório</small></li></ul>
+    </div>
+    <div class="aimg"><canvas class="ph" data-t=".4" data-src="img/areas.jpg"></canvas></div>
+  </div>
+</section>
+
+<section id="confianca" class="sec">
+  <div class="trust">
+    <div><p class="lbl">Por que escolher</p><h2>Atenção do começo ao fim.</h2><p class="ctx">Em Luziânia desde 2012, com atendimento direto e acompanhamento em cada etapa.</p></div>
+    <ul class="pil rv">
+      <li>
+        <h3>Atendimento próximo</h3>
+        <p>Você fala com quem conhece o seu caso.</p>
+      </li>
+      <li>
+        <h3>Seleção de imóveis</h3>
+        <p>Opções filtradas, sem excesso.</p>
+      </li>
+      <li>
+        <h3>Negociação</h3>
+        <p>Condução clara e transparente.</p>
+      </li>
+      <li>
+        <h3>Acompanhamento</h3>
+        <p>Suporte em todas as etapas.</p>
+      </li>
+      <li>
+        <h3>Atenção aos detalhes</h3>
+        <p>Documentos, prazos e visitas em ordem.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="ctas">
+  <canvas class="ph" data-t=".05" data-src="img/cta.png"></canvas><div class="shade"></div>
+  <div class="in"><p class="lbl">Próximo passo</p><h2>Seu próximo endereço<br>começa aqui.</h2><p class="ctx">Fale com a João Luiz Imóveis e encontre uma oportunidade em Luziânia.</p>
+    <a class="cta lg" href="https://wa.me/5561999823527" target="_blank" rel="noopener">Falar com a imobiliária</a> <a class="pill" href="#imoveis">Ver imóveis</a></div>
+</section>
+
+<section id="contato" class="contact">
+  <div><small>WhatsApp</small><a href="https://wa.me/5561999823527" target="_blank" rel="noopener">(61) 99982-3527</a></div>
+  <div><small>Telefone</small><a href="tel:+556136012152">(61) 3601-2152</a></div>
+  <div><small>Instagram</small><a href="https://www.instagram.com/joaoluizimoveis/" target="_blank" rel="noopener">@joaoluizimoveis</a></div>
+  <div><small>Localização</small><span>Rua Benjamin Roriz, Qd. 33, Lote 30, Loja 02<br>Setor Aeroporto · Luziânia — GO · 72801-147</span></div>
+</section>
+
+<footer>
+  <div class="fb"><a class="logo" href="#hero"><span class="mark"></span><span>João Luiz<small>Imóveis</small></span></a>
+  <p>Compra, venda, locação e avaliação de imóveis em Luziânia — GO.</p></div>
+  <nav><a href="#sobre">Sobre</a><a href="#imoveis">Imóveis</a><a href="#explorar">Explorar</a><a href="#servicos">Serviços</a><a href="#processo">Como funciona</a><a href="#contato">Contato</a><a href="#hero">Voltar ao topo ↑</a></nav>
+  <p class="cp">© João Luiz Imóveis · Luziânia — GO · CNPJ 15.828.743/0001-21</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
